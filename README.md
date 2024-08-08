@@ -1,6 +1,6 @@
 # Triton kernel example
-* OpenAI의 Triton Kernel 구성합니다.
-* 최종적으로는 Triton kernel 기반의 TTS 모델 구성을 시도합니다.
+* Configure OpenAI's Triton kernel.
+* Ultimately, attempt to build a TTS model based on the Triton kernel.
 
 - [X] Linear
 - [ ] Convolution 1d
