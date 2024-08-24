@@ -707,7 +707,7 @@ def benchmark_with_bias(M, N, K, provider):
         ms, min_ms, max_ms = triton.testing.do_bench(torch_test, quantiles=quantiles)
     if provider == 'triton':
         ms, min_ms, max_ms = triton.testing.do_bench(triton_test, quantiles=quantiles)
-    perf = lambda ms: 2 * M * N * K * 1e-12 / (ms * 1e-3)
+    perf = lambda ms: 2 * M * N * K * 1e-12 / (ms * 1e-3) * 3   # '* 3' -> forward + backward
     return perf(ms), perf(max_ms), perf(min_ms)
 
 
